@@ -9,3 +9,6 @@ on:
 jobs:
   run-and-test:
     uses: ./.github/workflows/ci.yml
+  deploy:
+    needs: run-and-test
+    uses: ./.github/workflows/cd.yml
