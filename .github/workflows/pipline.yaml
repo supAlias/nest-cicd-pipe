@@ -8,7 +8,7 @@ on:
 
 jobs:
   run-and-test:
-    uses: ./ci.yml
+    uses: ./ci
   deploy:
     needs: run-and-test
-    uses: ./cd.yml
+    uses: ./cd
