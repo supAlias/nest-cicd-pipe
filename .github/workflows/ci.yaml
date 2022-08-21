@@ -2,14 +2,14 @@ name: CI
 
 on:
   push:
-    branches: [ main ]
-  pull_request: 
-    branches: [ main ]
-    
-jobs: 
+    branches: [master]
+  pull_request:
+    branches: [master]
+
+jobs:
   build:
     runs-on: ubuntu-latest
-    steps: 
+    steps:
       - name: checkout repo
         uses: actions/checkout@v3
       - name: add node
@@ -17,4 +17,3 @@ jobs:
       - run: npm run ci
       - run: npm run build --if-present
       - run: npm run test
-  
