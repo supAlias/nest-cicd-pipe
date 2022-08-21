@@ -17,6 +17,7 @@ jobs:
         with:
           key: ${{ secrets.SSH_KEY }}
           known_hosts: gebrish
+          if_key_exists: replace
       - name: adding known hosts
         run: ssh-keyscan -H ${{ secrets.SSH_HOST }} >> ~/.ssh/known_hosts
       - name: use rsynx
