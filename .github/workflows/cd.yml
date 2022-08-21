@@ -18,6 +18,7 @@ jobs:
           HOST: ${{ secrets.SSH_HOST }}
           USERNAME: ${{ secrets.SSH_USERNAME }}
           KEY: ${{ secrets.SSH_KEY }}
+          PASSWORD: ${{ SSH_PWD }} 
         with:
           source: './dist'
           target: '/var/www'
