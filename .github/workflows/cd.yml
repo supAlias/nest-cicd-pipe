@@ -17,7 +17,7 @@ jobs:
         env:
           HOST: ${{ secrets.SSH_HOST }}
           USERNAME: ${{ secrets.SSH_USERNAME }}
-          PASSWORD: ${{ secrets.SSH_KEY }}
+          KEY: ${{ secrets.SSH_KEY }}
         with:
           source: './dist'
           target: '/var/www'
