@@ -14,8 +14,8 @@ jobs:
       - run: npm run build
       - name: Install SSH Key
         uses: appleboy/ssh-action@master
-        with:
-          host: ${{ secrets.SSH_HOST }}
-          username: ${{ secrets.SSH_USERNAME }}
-          key: ${{ secrets.SSH_KEY }}
-          script: whoami
+        env:
+          HOST: ${{ secrets.SSH_HOST }}
+          USERNAME: ${{ secrets.SSH_USERNAME }}
+          KEY: ${{ secrets.SSH_KEY }}
+          SCRIPT: whoami
